@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 
 public class Front_Screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -20,7 +24,7 @@ public class Front_Screen extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_front__screen);
+        setContentView(R.layout.home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -80,13 +84,18 @@ public class Front_Screen extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        Fragment fragment = null;
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
 
+     //       Intent homeIntent = new Intent(Front_Screen.this, Text.class);
+     //       startActivity(homeIntent);
+      //      Intent anIntent = new Intent(getApplicationContext(), Text.class);
+      //      anIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+      //      startActivity(anIntent);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
@@ -94,7 +103,11 @@ public class Front_Screen extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
-
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -106,17 +119,17 @@ public class Front_Screen extends AppCompatActivity
             Intent homeIntent = new Intent(Front_Screen.this, Text.class);
             startActivity(homeIntent);
             finish();
-        } else if (view.getId() == R.id.email) {
+//        } else if (view.getId() == R.id.email) {
             //button2 action
-        } else if (view.getId() == R.id.url) {
+//        } else if (view.getId() == R.id.url) {
             //button3 action
-        } else if (view.getId() == R.id.status) {
+//        } else if (view.getId() == R.id.status) {
             //button2 action
-        } else if (view.getId() == R.id.blog) {
+//        } else if (view.getId() == R.id.blog) {
             //button3 action
-        } else if (view.getId() == R.id.article) {
+//        } else if (view.getId() == R.id.article) {
             //button2 action
-        } else if (view.getId() == R.id.code) {
+//        } else if (view.getId() == R.id.code) {
             //button3 action
         }
     }

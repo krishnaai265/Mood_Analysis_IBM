@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Front_Screen"
-    tools:showIn="@layout/app_bar_front__screen"
-    android:orientation="vertical">
+    tools:showIn="@layout/app_bar_main"
+    android:orientation="vertical"
+    android:layout_marginTop="50dp">
 
   <LinearLayout
         android:id="@+id/scroll"
@@ -29,11 +30,10 @@
         android:orientation="vertical"
         android:layout_marginLeft="170px"
         android:layout_marginTop="80px"
-        android:clickable="true"
-        android:onClick="image_click">
+        android:clickable="true">
 
         <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView1"
         android:layout_width="96dp"
         android:layout_height="95dp"
         android:src="@drawable/text"
@@ -41,7 +41,7 @@
         tools:layout_editor_absoluteY="54dp" />
 
         <TextView
-            android:id="@+id/Text"
+            android:id="@+id/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -65,7 +65,7 @@
         android:layout_marginTop="80px">
 
         <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView2"
         android:layout_width="96dp"
         android:layout_height="95dp"
         android:src="@drawable/email"
@@ -73,13 +73,13 @@
         tools:layout_editor_absoluteY="54dp" />
 
         <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:textColor="@color/colorAccent"
-        android:text="Email"
+        android:text="@string/email"
         android:textSize="18sp"
         android:textStyle="bold"
         android:typeface="serif"
@@ -105,7 +105,7 @@
             android:layout_marginTop="80px">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageView3"
                 android:layout_width="96dp"
                 android:layout_height="95dp"
                 android:src="@drawable/status"
@@ -113,7 +113,7 @@
                 tools:layout_editor_absoluteY="54dp" />
 
             <TextView
-                android:id="@+id/Text"
+                android:id="@+id/Text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="26dp"
@@ -137,7 +137,7 @@
             android:layout_marginTop="80px">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView4"
                 android:layout_width="96dp"
                 android:layout_height="95dp"
                 android:src="@drawable/url"
@@ -145,7 +145,7 @@
                 tools:layout_editor_absoluteY="54dp" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
@@ -176,7 +176,7 @@
             android:layout_marginTop="80px">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageView5"
                 android:layout_width="96dp"
                 android:layout_height="95dp"
                 android:src="@drawable/blog"
@@ -184,12 +184,12 @@
                 tools:layout_editor_absoluteY="54dp" />
 
             <TextView
-                android:id="@+id/Text"
+                android:id="@+id/Text5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="10dp"
-                android:text="Blog"
+                android:text="@string/blog"
                 android:textColor="@color/colorAccent"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -208,7 +208,7 @@
             android:layout_marginTop="80px">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView6"
                 android:layout_width="96dp"
                 android:layout_height="95dp"
                 android:src="@drawable/article"
@@ -222,7 +222,7 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/colorAccent"
-                android:text="Article"
+                android:text="@string/article"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:typeface="serif"
@@ -247,7 +247,7 @@
             android:layout_marginTop="80px">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageView7"
                 android:layout_width="96dp"
                 android:layout_height="95dp"
                 android:src="@drawable/code"
@@ -255,12 +255,12 @@
                 tools:layout_editor_absoluteY="54dp" />
 
             <TextView
-                android:id="@+id/Text"
+                android:id="@+id/Text7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="10dp"
-                android:text="Code"
+                android:text="@string/code"
                 android:textColor="@color/colorAccent"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -270,7 +270,7 @@
 
         </LinearLayout>
 
-   <!--     <LinearLayout
+         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -278,7 +278,7 @@
             android:layout_marginTop="80px">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView8"
                 android:layout_width="96dp"
                 android:layout_height="95dp"
                 android:src="@drawable/url"
@@ -286,7 +286,7 @@
                 tools:layout_editor_absoluteY="54dp" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
@@ -299,9 +299,9 @@
                 tools:layout_editor_absoluteX="264dp"
                 tools:layout_editor_absoluteY="161dp" />
 
-        </LinearLayout>-->
+        </LinearLayout>
     </LinearLayout>
 
 
 </LinearLayout>
-    </ScrollView>
+    </LinearLayout>

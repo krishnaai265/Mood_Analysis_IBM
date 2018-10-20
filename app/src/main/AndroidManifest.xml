@@ -22,12 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity
-            android:name=".Front_Screen"
-            android:label="@string/title_activity_front__screen"
+ <!--       <activity android:name=".MainActivity"
+            android:label="Main Activity"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".Text"></activity>
+  -->
     </application>
 
 </manifest>

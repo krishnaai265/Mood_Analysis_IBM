@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -81,8 +83,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);/*
-
+        setContentView(R.layout.activity_main);
+/*
         System.out.println("I am here");
         //initialize UI parameters
         textView = (TextView) findViewById(R.id.textView);
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity
             }
 
         });
-*//*      NaturalLanguageUnderstanding service = new NaturalLanguageUnderstanding(
+*/ /*      NaturalLanguageUnderstanding service = new NaturalLanguageUnderstanding(
                 "2018-03-16",
                 "b03fb92a-e8f2-437b-a48f-04c4c7fa1176",
                 "YSyFleB2APjV"
@@ -134,7 +136,7 @@ public class MainActivity extends AppCompatActivity
                 .features(features)
                 .build();
 
-/*        AnalysisResults response = service
+        AnalysisResults response = service
                 .analyze(parameters)
                 .execute();
         System.out.println(response);
@@ -156,6 +158,14 @@ public class MainActivity extends AppCompatActivity
 */
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        if (savedInstanceState == null) {
+            Fragment newFragment = new HomeFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.add(R.id.content_frame, newFragment);
+            ft.addToBackStack(null);
+            ft.commit();
+        }
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

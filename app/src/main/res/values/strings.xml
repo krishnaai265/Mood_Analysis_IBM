@@ -7,4 +7,11 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_front__screen">Front_Screen</string>
+    <string name="write_here">Write here...</string>
+    <string name="analyze">Analyze</string>
+    <string name="textview">TextView</string>
+    <string name="email">Email</string>
+    <string name="blog">Blog</string>
+    <string name="article">Article</string>
+    <string name="code">Code</string>
 </resources>
